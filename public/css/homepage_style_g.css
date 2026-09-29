@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Reusability */
+:root {
+    --university-red: #752528;
+    --university-dark-red: #902e32;
+    --background-light: #f7f9fc;
+    --background-sidebar:#f0f1f3;
+    --text-color: #333;
+    --text-light: #f7f9fc;
+}
+
+/* Global Styles */
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background-light); /* Fallback for areas outside the image */
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Social Media Header */
+.social-header {
+    background-color: var(--university-red);
+    color: var(--text-light);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.header-right a {
+    display: inline-block;
+    margin-left: 20px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var (--text-light);
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s, filter 0.2s;
+    text-decoration:none
+}
+
+.header-right a img {
+    width: 20px;
+    height: 20px;
+}
+.header-right a:hover {
+    transform: scale(1.01);
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 300px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0; 
+    background-color: var(--background-sidebar);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 75px; /* leaves space for fixed header */
+  }
+  
+  /* The navigation menu links */
+  .sidenav button {
+    width: 300px;
+    text-align: left;
+    padding: 12px 8px 12px 12px;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    color: #752528;
+    display: block;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav button:hover {
+    background-color: #d3d3d3;
+    border-radius: 12px;
+    
+  }
+
+  .nav-button.active {
+    background-color: #d3d3d3; /* Even darker shade on click */
+    border-radius: 12px;
+}
+  
+
+  .sidenav .icon {
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+  filter: invert(14%) sepia(95%) saturate(1338%) hue-rotate(331deg) brightness(96%) contrast(91%);
+}
+
+/* Style page content container and content panes */
+#content-container {
+    padding: 75px 20px; /* Adjusted padding for better layout */
+    margin-left: 300px; /* Ensure content starts at the end of the sidebar */
+    width: calc(100% - 300px); /* fixed missing unit */
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.content {
+    padding: 20px;
+    display: none; /* hidden by default; controlled by .visible/.hidden */
+}
+
+.content.visible {
+    display: block;
+}
+
+.content.hidden {
+    display: none;
+}
+
+#titlos {
+    font-size: 30px;
+    color: var(--university-dark-red);
+    border-bottom: 2px solid var(--university-red);
+}
+
+  h1 {
+    color: var(--university-dark-red);
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+
+/* Chart wrapper to visually separate charts and match title color */
+.chart-wrapper {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 8px;
+    background-color: #fff;
+    border: 2px solid var(--university-dark-red);
+    border-radius: 6px;
+}
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ th, td {
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    border: 1px solid var(--university-red);
+}
+
+ th {
+    background-color: var(--university-dark-red);
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+ td {
+    background-color: var(--text-light);
+    color: var(--text-color);
+}
+
+ tr:nth-child(even) td {
+    background-color: var(--background-light);
+}
+
+ tr:hover td {
+    background-color: var(--university-red);
+    color: var(--text-light);
+    transition: background-color 0.3s ease;
+}
+
+/* General Label Styling */
+label {
+    font-size: 16px;
+    color: var(--university-dark-red);
+    font-weight: bold;
+    margin-right: 5px;
+    display: inline-block; /* Ensures proper alignment with adjacent elements */
+}
+
+/* Style for Dropdowns (Reusable) */
+.filter-dropdown {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--university-dark-red);
+    background-color: var(--background-sidebar);
+    border: 2px solid var(--university-red);
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates interactivity */
+}
+
+/* Hover effect for Dropdowns */
+.filter-dropdown:hover {
+    border-color: var(--university-dark-red);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus effect for Dropdowns */
+.filter-dropdown:focus {
+    outline: none;
+    border-color: var(--university-dark-red);
+    box-shadow: 0 0 5px rgba(117, 37, 40, 0.5);
+}
+
+/* Disabled Dropdown Styling */
+.filter-dropdown:disabled {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    border-color: var(--text-color);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.diplwmatiki-card {
+    background-color: var(--background-sidebar); /* Light background color */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Inner spacing */
+    max-width: 1500px; /* Maximum width */
+    margin: 20px auto; /* Center the card */
+    line-height: 1.6; /* Improve readability */
+}
+
+.diplwmatiki-card p {
+    margin: 10px 0; /* Add spacing between paragraphs */
+    color: #333; /* Darker text color for contrast */
+    font-size: 1em; /* Standard font size */
+}
+
+.diplwmatiki-card p strong {
+    color: var(--university-dark-red); /* Highlighted labels */
+}
+
+.back-button {
+    background-color: var(--background-sidebar);
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    color: var(--university-dark-red);
+    padding: 5px 15px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.back-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid var(--university-dark-red);
+}
+  
+#themata .titlos, #themata #titlos {
+    color: var(--university-dark-red);
+    font-size: 32px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+
+#themata button {
+    background-color: var(--background-sidebar);
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    color: var(--university-dark-red);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+    margin-bottom: 8px;
+}
+
+#themata button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid var(--university-dark-red);
+}
+
+#themata  h1 {
+    color: var(--university-dark-red);
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+.dhmiourgia-thematos {
+    margin-bottom: 20px;
+}
+
+.dhmiourgia-thematos form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dhmiourgia-thematos label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--university-dark-red);
+}
+
+.dhmiourgia-thematos input,
+.dhmiourgia-thematos textarea,
+.dhmiourgia-thematos select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    outline: 2px solid #D3D3D3;
+    transition: outline 0.2s ease;
+    font-size: 16px;
+    resize: none;
+}
+
+.dhmiourgia-thematos input:focus,
+.dhmiourgia-thematos textarea:focus,
+.dhmiourgia-thematos select:focus {
+    outline: 2px solid var(--university-dark-red); /* Change outline to red when clicked */
+}
+
+.dhmiourgia-thematos button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--university-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dhmiourgia-thematos button:hover {
+    background-color: var(--university-dark-red);
+}
+
+/* Import JSON area - match professor button styles for consistency */
+.import-json {
+    background-color: transparent;
+}
+.import-json h2 {
+    color: var(--university-dark-red);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.import-json input[type="file"] {
+    padding: 8px 10px;
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    background-color: var(--background-light);
+    font-size: 14px;
+}
+.import-json button {
+    background-color: var(--background-sidebar);
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    color: var(--university-dark-red);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+    margin-left: 8px;
+}
+.import-json button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid var(--university-dark-red);
+}
+
+.edit-thema {
+    margin-bottom: 20px;
+}
+
+.edit-thema form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-thema label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--university-dark-red);
+}
+
+.edit-thema input,
+.edit-thema textarea,
+.edit-thema select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    outline: 2px solid #D3D3D3;
+    transition: outline 0.2s ease;
+    font-size: 16px;
+    resize: none;
+}
+
+.edit-thema input:focus,
+.edit-thema textarea:focus,
+.edit-thema select:focus {
+    outline: 2px solid var(--university-dark-red);
+}
+
+/* Utility class to make standalone inputs/textarea look like edit fields */
+.input-like {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    outline: 2px solid #D3D3D3;
+    transition: outline 0.2s ease;
+    font-size: 16px;
+    resize: none;
+}
+.input-like:focus {
+    outline: 2px solid var(--university-dark-red);
+}
+
+.edit-thema button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--university-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-thema button[type="submit"]:hover {
+    background-color: var(--university-dark-red);
+}
+
+.edit-thema h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.anathesi-thematos {
+    margin-bottom: 20px;
+}
+
+.anathesi-thematos form {
+    display: flex;
+    flex-direction: column;
+}
+
+.anathesi-thematos .search-container {
+    display: flex;
+    align-items: center;
+}
+
+.anathesi-thematos .search-container input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.anathesi-thematos .dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.anathesi-thematos .dropdown-container select {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.anathesi-thematos label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--university-dark-red);
+}
+
+.anathesi-thematos input,
+.anathesi-thematos select {
+    padding: 10px;
+    margin-top: 14px;
+    border: 2px solid #D3D3D3;
+    border-radius: 12px;
+    outline: 2px solid #D3D3D3;
+    transition: outline 0.2s ease;
+    font-size: 16px;
+    resize: none;
+}
+
+.anathesi-thematos input:focus,
+.anathesi-thematos select:focus {
+    outline: 2px solid var(--university-dark-red); /* Change outline to red when clicked */
+}
+
+.anathesi-thematos button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--university-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.anathesi-thematos button:hover {
+    background-color: var(--university-dark-red);
+}
+
+.anathesi-thematos #foititis-results {
+    margin-top: 0;
+}
+
+.foititis-result-item {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid var(--university-red);
+    border-radius: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+.foititis-result-item:hover {
+    background-color: var(--background-light);
+}
+
+.foititis-result-item.selected {
+    outline: 2px solid var(--university-dark-red); /* Red outline for selected item */
+}
+
+#proskliseis titlos {
+    color: var(--university-dark-red);
+    font-size: 32px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+
+#proskliseis  h1 {
+    color: var(--university-dark-red);
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+
+  
+#statistika titlos {
+    color: var(--university-dark-red);
+    font-size: 32px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+
+#statistika  h1 {
+    color: var(--university-dark-red);
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--university-red);
+    padding-bottom: 5px;
+}
+
+.content {
+    display: none;
+}
+
+.content.visible {
+    display: block;
+}
+
+.upload-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--university-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: var(--university-dark-red);
+}
+
+
+.accept-button,
+.reject-button {
+    padding: 10px 20px;
+    background-color: var(--university-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.accept-button:hover,
+.reject-button:hover {
+    background-color: var(--university-dark-red);
+}
+.accept-button:hover,
+.reject-button:hover {
+    background-color: var(--university-dark-red);
+}
+
+
+/* Numeric input utility: centralize numeric input styling for protocol/committee inputs */
+.numeric-input input[type="number"],
+#arithmos-prwtokolou {
+    width: 300px;
+    padding: 6px 8px;
+    border: 2px solid #D3D3D3;
+    border-radius: 8px;
+    outline: none;
+    transition: outline 0.15s ease;
+    margin-top: 6px; /* spacing between label text and input box */
+
+    /* Remove spinner arrows in Firefox */
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Remove spinner arrows in WebKit browsers (Chrome, Safari, Edge Chromium) */
+.numeric-input input[type="number"]::-webkit-outer-spin-button,
+.numeric-input input[type="number"]::-webkit-inner-spin-button,
+#arithmos-prwtokolou::-webkit-outer-spin-button,
+#arithmos-prwtokolou::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove clear/expand buttons in IE/Edge legacy */
+.numeric-input input[type="number"]::-ms-clear,
+.numeric-input input[type="number"]::-ms-expand,
+#arithmos-prwtokolou::-ms-clear,
+#arithmos-prwtokolou::-ms-expand {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.numeric-input input[type="number"]:focus,
+#arithmos-prwtokolou:focus {
+    outline: 2px solid var(--university-dark-red);
+}
+
+
+/* detail panel styles (copied/adapted for grammateia) */
+/* (detail panel styles copied/adapted for grammateia) */
+.content #diplwmatikes .anaskopisi-diplwmatikis {
+    display: none; /* shown by script when needed */
+    position: relative; /* inline detail panel inside diplwmatikes */
+    width: 100%;
+    margin: 12px 0 0 0; /* small gap under the table wrapper */
+    box-sizing: border-box;
+    background-color: var(--background-sidebar);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    padding: 20px; /* internal spacing */
+}
+
+.anaskopisi-diplwmatikis .anaskopisi-body {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 12px;
+}
+
+.anaskopisi-diplwmatikis .shmeiwseis-list {
+    max-height: 40vh;
+    overflow: auto; 
+    padding: 8px;
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.shmeiwsh-item {
+    padding: 8px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.shmeiwsh-date { font-size: 0.85em; color: #666; }
+.shmeiwsh-author { font-size: 0.9em; margin-bottom: 6px; }
+
+.anaskopisi-diplwmatikis .files a { display: block; color: var(--university-dark-red); margin-bottom:6px; text-decoration: none; }
+
+/* Smooth hide/show for the table wrapper (used by the JS) */
+.diplwmatikes-table-wrapper { transition: opacity 200ms ease, height 200ms ease; }
+.diplwmatikes-table-wrapper[hidden] { opacity: 0; height: 0; overflow: hidden; }
+

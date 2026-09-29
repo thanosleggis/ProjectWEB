@@ -1,0 +1,200 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Reusability */
+:root {
+    --university-red: #752528;
+    --university-dark-red: #902e32;
+    --background-light: #f7f9fc;
+    --text-color: #333;
+    --text-light: #f7f9fc;
+}
+
+/* Global Styles */
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--background-light); /* Fallback for areas outside the image */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of the image */
+}
+
+.background-center-third {
+    position: absolute;
+    top: 0; /* Start at the top of the middle third */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Occupy one-third of the height */
+    background: url('../icons/graduation-photo-hats.jpg') no-repeat center center;
+    background-size: cover; /* Scale image to fit the area */
+    z-index: -1; /* Push behind other content */
+}
+
+/* Social Media Header */
+.social-header {
+    background-color: var(--university-red);
+    color: var(--text-light);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    color: var(--text-light); /* Removes specific color styling */
+}
+
+.header-title:hover, .header-title:visited, .header-title:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Social Media Icons */
+.social-header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-header nav ul li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.social-header nav ul li img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.social-header nav ul li img:hover {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+/* Login Container */
+.login-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.login-header h1 {
+    font-size: 1.5rem;
+    color: var(--university-red);
+    margin-bottom: 20px;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-form label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.login-form input:focus {
+    border-color: var(--university-dark-red);
+    outline: none;
+    box-shadow: 0 0 5px rgba(144, 46, 50, 0.2);
+}
+
+.error-message {
+    color: var(--university-dark-red);
+    font-style: italic;
+    font-size: 1rem;
+    margin: 3px 0;
+    background-color: #ffe6e6;
+    border: 1px solid var(--university-dark-red);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-form button {
+    padding: 10px;
+    margin: 10px 0px;
+    background: var(--university-dark-red);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-form button:hover {
+    background: #7d1f22; /* Slightly darker shade */
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: var(--university-dark-red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

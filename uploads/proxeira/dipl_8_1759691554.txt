@@ -1,0 +1,28 @@
+ID,Type,SKU,"GTIN, UPC, EAN, or ISBN",Name,Published,Is featured?,Visibility in catalog,Short description,Description,Date sale price starts,Date sale price ends,Tax status,Tax class,In stock?,Stock,Low stock amount,Backorders allowed?,Sold individually?,Weight (kg),Length (cm),Width (cm),Height (cm),Allow customer reviews?,Purchase note,Sale price,Regular price,Categories,Tags,Shipping class,Images,Download limit,Download expiry days,Parent,Grouped products,Upsells,Cross-sells,External URL,Button text,Position,Brands,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,Attribute 2 name,Attribute 2 value(s),Attribute 2 visible,Attribute 2 global
+,variable,SG-TREAD-01,,Treadmill X100,1,,visible,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Color,Black | Silver,1,1,Size,Standard | Compact,1,1
+,variation,SG-TREAD-01-BLK-STD,,,,,,,,,,,,,,,,,,,,,,,,899.99,,,,,,,SG-TREAD-01,,,,,,,,Color,Black,1,1,Size,Standard,1,1
+,variation,SG-TREAD-01-BLK-CMP,,,,,,,,,,,,,,,,,,,,,,,,849.99,,,,,,,SG-TREAD-01,,,,,,,,Color,Black,1,1,Size,Compact,1,1
+,variation,SG-TREAD-01-SLV-STD,,,,,,,,,,,,,,,,,,,,,,,,919.99,,,,,,,SG-TREAD-01,,,,,,,,Color,Silver,1,1,Size,Standard,1,1
+,variation,SG-TREAD-01-SLV-CMP,,,,,,,,,,,,,,,,,,,,,,,,869.99,,,,,,,SG-TREAD-01,,,,,,,,Color,Silver,1,1,Size,Compact,1,1
+,variable,SG-KET-01,,Kettlebell Pro Series,1,,visible,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Weight,8kg | 12kg | 16kg,1,1,Material,Cast Iron | Vinyl,1,1
+,variation,SG-KET-01-8-CI,,,,,,,,,,,,,,,,,,,,,,,,45.0,,,,,,,SG-KET-01,,,,,,,,Weight,8kg,1,1,Material,Cast Iron,1,1
+,variation,SG-KET-01-8-VN,,,,,,,,,,,,,,,,,,,,,,,,48.0,,,,,,,SG-KET-01,,,,,,,,Weight,8kg,1,1,Material,Vinyl,1,1
+,variation,SG-KET-01-12-CI,,,,,,,,,,,,,,,,,,,,,,,,55.0,,,,,,,SG-KET-01,,,,,,,,Weight,12kg,1,1,Material,Cast Iron,1,1
+,variation,SG-KET-01-12-VN,,,,,,,,,,,,,,,,,,,,,,,,58.0,,,,,,,SG-KET-01,,,,,,,,Weight,12kg,1,1,Material,Vinyl,1,1
+,variation,SG-KET-01-16-CI,,,,,,,,,,,,,,,,,,,,,,,,65.0,,,,,,,SG-KET-01,,,,,,,,Weight,16kg,1,1,Material,Cast Iron,1,1
+,variation,SG-KET-01-16-VN,,,,,,,,,,,,,,,,,,,,,,,,68.0,,,,,,,SG-KET-01,,,,,,,,Weight,16kg,1,1,Material,Vinyl,1,1
+,variable,SG-BIKE-01,,Stationary Bike SprintX,1,,visible,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Color,Red | Black,1,1,Resistance,Magnetic | Friction,1,1
+,variation,SG-BIKE-01-RED-MAG,,,,,,,,,,,,,,,,,,,,,,,,499.0,,,,,,,SG-BIKE-01,,,,,,,,Color,Red,1,1,Resistance,Magnetic,1,1
+,variation,SG-BIKE-01-RED-FRI,,,,,,,,,,,,,,,,,,,,,,,,479.0,,,,,,,SG-BIKE-01,,,,,,,,Color,Red,1,1,Resistance,Friction,1,1
+,variation,SG-BIKE-01-BLK-MAG,,,,,,,,,,,,,,,,,,,,,,,,489.0,,,,,,,SG-BIKE-01,,,,,,,,Color,Black,1,1,Resistance,Magnetic,1,1
+,variation,SG-BIKE-01-BLK-FRI,,,,,,,,,,,,,,,,,,,,,,,,469.0,,,,,,,SG-BIKE-01,,,,,,,,Color,Black,1,1,Resistance,Friction,1,1
+,variable,SG-BENCH-01,,Adjustable Bench MaxLift,1,,visible,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Material,Steel | Aluminum,1,1,Position,Flat | Incline,1,1
+,variation,SG-BENCH-01-ST-FL,,,,,,,,,,,,,,,,,,,,,,,,199.0,,,,,,,SG-BENCH-01,,,,,,,,Material,Steel,1,1,Position,Flat,1,1
+,variation,SG-BENCH-01-ST-IN,,,,,,,,,,,,,,,,,,,,,,,,219.0,,,,,,,SG-BENCH-01,,,,,,,,Material,Steel,1,1,Position,Incline,1,1
+,variation,SG-BENCH-01-AL-FL,,,,,,,,,,,,,,,,,,,,,,,,179.0,,,,,,,SG-BENCH-01,,,,,,,,Material,Aluminum,1,1,Position,Flat,1,1
+,variation,SG-BENCH-01-AL-IN,,,,,,,,,,,,,,,,,,,,,,,,199.0,,,,,,,SG-BENCH-01,,,,,,,,Material,Aluminum,1,1,Position,Incline,1,1
+,variable,SG-BAG-01,,Punching Bag HeavyPro,1,,visible,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Length,100cm | 120cm,1,1,Fill,Sand | Cotton,1,1
+,variation,SG-BAG-01-100-SAND,,,,,,,,,,,,,,,,,,,,,,,,89.0,,,,,,,SG-BAG-01,,,,,,,,Length,100cm,1,1,Fill,Sand,1,1
+,variation,SG-BAG-01-100-COT,,,,,,,,,,,,,,,,,,,,,,,,95.0,,,,,,,SG-BAG-01,,,,,,,,Length,100cm,1,1,Fill,Cotton,1,1
+,variation,SG-BAG-01-120-SAND,,,,,,,,,,,,,,,,,,,,,,,,99.0,,,,,,,SG-BAG-01,,,,,,,,Length,120cm,1,1,Fill,Sand,1,1
+,variation,SG-BAG-01-120-COT,,,,,,,,,,,,,,,,,,,,,,,,105.0,,,,,,,SG-BAG-01,,,,,,,,Length,120cm,1,1,Fill,Cotton,1,1

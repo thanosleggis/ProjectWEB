@@ -1,0 +1,40 @@
+Usage examples for public presentations feed endpoint
+
+Endpoint base (example local URL):
+http://localhost/webproject-root/backend/index.php
+
+These examples correspond to the public presentations feed and show only the request URLs and expected behaviour — sample response bodies were removed to keep this file concise.
+
+1) Default JSON (no dates) — returns presentations for the default date window
+Description: quick smoke test, default format is JSON
+URL:
+http://localhost/webproject-root/backend/index.php?public_feed=presentations
+
+2) JSON for a specific month (June 2024)
+Description: presentations between 2024-06-01 and 2024-06-30
+URL:
+http://localhost/webproject-root/backend/index.php?public_feed=presentations&from=2024-06-01&to=2024-06-30
+
+3) XML output for the same month
+Description: request XML instead of JSON
+URL:
+http://localhost/webproject-root/backend/index.php?public_feed=presentations&from=2024-06-01&to=2024-06-30&format=xml
+
+4) Single-day JSON
+Description: presentations happening on 2024-06-17
+URL:
+http://localhost/webproject-root/backend/index.php?public_feed=presentations&from=2024-06-17&to=2024-06-17
+
+5) Invalid date (error case)
+Description: server should return a JSON error for invalid date format
+URL:
+http://localhost/webproject-root/backend/index.php?public_feed=presentations&from=2025-13-01&to=2025-13-31
+
+6) curl example showing headers (Windows cmd)
+Description: use curl to inspect response headers and body
+Command (Windows cmd):
+curl -i "http://localhost/webproject-root/backend/index.php?public_feed=presentations&from=2024-06-01&to=2024-06-30&format=json"
+
+Notes:
+- Adjust host/path if your local Apache maps the project differently (e.g., http://localhost/myapp/...).
+- If you need Atom/RSS or a different XML schema, tell me which format to produce and I can update the endpoint.

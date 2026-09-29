@@ -1,0 +1,16 @@
+{
+  "foititis": [
+    { "name": "Γιάννης", "lastname": "Παπαδόπουλος", "address": "Οδός Αιγίου 12, Πάτρα", "phone": "6940000001", "landline": "261000001", "email": "giannis.pap@example.com", "password": "Giapap01" },
+    { "name": "Μαρία", "lastname": "Νικολάου", "address": "Οδός Κορίνθου 5, Πάτρα", "phone": "6940000002", "landline": "261000002", "email": "maria.nik@example.com", "password": "MariaNik2" },
+    { "name": "Κώστας", "lastname": "Αντωνίου", "address": "Οδός Αγίου Ανδρέου 8, Πάτρα", "phone": "6940000003", "landline": "261000003", "email": "kostas.ant@example.com", "password": "KostasA3" },
+    { "name": "Ελένη", "lastname": "Δημητρίου", "address": "Οδός Όθωνος 3, Πάτρα", "phone": "6940000004", "landline": "261000004", "email": "eleni.d@example.com", "password": "EleniD4" },
+    { "name": "Πέτρος", "lastname": "Μιχαλάκης", "address": "Οδός Γούναρη 21, Πάτρα", "phone": "6940000005", "landline": "261000005", "email": "petros.m@example.com", "password": "PetrosM5" },
+    { "name": "Σοφία", "lastname": "Καραγιάννη", "address": "Οδός Ρήγα Φεραίου 14, Πάτρα", "phone": "6940000006", "landline": "261000006", "email": "sofia.k@example.com", "password": "SofiaK6" },
+    { "name": "Άρης", "lastname": "Θεοδωρίδης", "address": "Οδός Ερμού 2, Πάτρα", "phone": "6940000007", "landline": "261000007", "email": "aris.t@example.com", "password": "ArisT7" }
+  ],
+  "didaskwn": [
+    { "name": "Αθανάσιος", "lastname": "Κωνσταντίνου", "phone": "261000010", "email": "athanasios.k@example.com", "password": "Athanasios1" },
+    { "name": "Ειρήνη", "lastname": "Παρασκευοπούλου", "phone": "261000011", "email": "eirini.p@example.com", "password": "EiriniP2" },
+    { "name": "Νικόλαος", "lastname": "Σπυρόπουλος", "phone": "261000012", "email": "nikolaos.s@example.com", "password": "Nikolaos3" }
+  ]
+}
